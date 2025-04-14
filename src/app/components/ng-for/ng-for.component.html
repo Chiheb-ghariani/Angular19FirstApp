@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-3">
+        <ul>
+            <li *ngFor="let city of cityList"> {{city}}</li>
+            
+        </ul>
+    </div>
+    <div class="col-5 ">
+        <button *ngFor="let cityName of cityList  " class="btn btn-success mx-1" >
+            {{cityName}}
+    </button>
+    </div>
+    <div class="col-3">
+        <div *ngFor="let city of cityList">
+            <span> {{city}}</span>
+
+        </div>
+    </div> 
+</div>
+<div class="row">
+    <div class="col-3">
+        <select>
+            <option *ngFor="let emp of employeeArray" [value]="emp.name ">
+                {{emp.name}} - {{emp.city}}
+            </option>
+        </select>
+    </div>
+    <div class="col-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th> Sr No</th>
+                    <th>Name</th>
+                    <th> city</th>
+                    
+                     
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of employeeArray; let i = index">
+                    <td>{{i + 1}}</td>
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.city}}</td>
+                    
+                </tr>
+        </table>
+    </div>
+</div>
